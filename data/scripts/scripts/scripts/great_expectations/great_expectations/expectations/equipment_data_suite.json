@@ -1,0 +1,19 @@
+{
+  "data_asset_type": "Dataset",
+  "expectation_suite_name": "equipment_data_suite",
+  "expectations": [
+    {"expectation_type": "expect_table_columns_to_match_ordered_list", "kwargs": {"column_list": ["equipment_id", "temperature", "vibration", "pressure", "age_hours", "load", "failure", "inspection_date"]}, "meta": {}},
+    {"expectation_type": "expect_table_row_count_to_be_between", "kwargs": {"min_value": 1, "max_value": 100000}, "meta": {}},
+    {"expectation_type": "expect_column_values_to_not_be_null", "kwargs": {"column": "equipment_id"}, "meta": {}},
+    {"expectation_type": "expect_column_values_to_not_be_null", "kwargs": {"column": "temperature"}, "meta": {}},
+    {"expectation_type": "expect_column_values_to_not_be_null", "kwargs": {"column": "failure"}, "meta": {}},
+    {"expectation_type": "expect_column_values_to_be_between", "kwargs": {"column": "temperature", "min_value": 50, "max_value": 120}, "meta": {}},
+    {"expectation_type": "expect_column_values_to_be_between", "kwargs": {"column": "vibration", "min_value": 0, "max_value": 10}, "meta": {}},
+    {"expectation_type": "expect_column_values_to_be_between", "kwargs": {"column": "pressure", "min_value": 80, "max_value": 150}, "meta": {}},
+    {"expectation_type": "expect_column_values_to_be_between", "kwargs": {"column": "age_hours", "min_value": 0, "max_value": 10000}, "meta": {}},
+    {"expectation_type": "expect_column_values_to_be_between", "kwargs": {"column": "load", "min_value": 0.0, "max_value": 1.0}, "meta": {}},
+    {"expectation_type": "expect_column_values_to_be_in_set", "kwargs": {"column": "failure", "value_set": [0, 1]}, "meta": {}},
+    {"expectation_type": "expect_column_values_to_be_unique", "kwargs": {"column": "equipment_id"}, "meta": {}}
+  ],
+  "meta": {"great_expectations_version": "0.18.0"}
+}
